@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".aktiviti.RekeningList"
+    android:orientation="vertical">
+
+    <!--  Untuk id pada masing-masing layout harus beda dengan layout di file lain  -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Data Rekening"
+        android:layout_margin="16dp"
+        android:textSize="30dp"
+        android:textStyle="bold"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/main_cv_rek"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="65dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="8dp">
+
+        <EditText
+            android:id="@+id/cari_rekening"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint=" Cari Nama Rekening"
+            android:padding="12dp"
+            android:textSize="16sp"
+            android:layout_margin="8dp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <ListView
+        android:id="@+id/lv_rekening"
+        android:layout_width="match_parent"
+        android:layout_height="582dp"
+        android:layout_below="@+id/main_cv_rek"
+        android:layout_marginTop="1dp">
+
+    </ListView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_pindah_pel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="View Pelanggan"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:backgroundTint="#FFEB3B"/>
+        <Button
+            android:id="@+id/btn_tambah_rek"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            android:text="Tambah Rekening"
+            android:backgroundTint="@color/biru"/>
+    </LinearLayout>
+
+</RelativeLayout>
